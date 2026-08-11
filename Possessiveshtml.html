@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Possessive Adjectives & Pronouns</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 30px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .instructions {
+            background: #eef5ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .word-bank {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .text {
+            font-size: 18px;
+            line-height: 2;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 4px 8px;
+            border: 2px solid #bbb;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+        }
+
+        select.correct {
+            border-color: #27ae60;
+            background-color: #eafaf1;
+        }
+
+        select.incorrect {
+            border-color: #e74c3c;
+            background-color: #fdecea;
+        }
+
+        button {
+            display: block;
+            margin: 30px auto 15px;
+            padding: 12px 25px;
+            font-size: 17px;
+            border: none;
+            border-radius: 8px;
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .reset {
+            background: #7f8c8d;
+        }
+
+        .reset:hover {
+            background: #636e72;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Possessive Adjectives & Pronouns</h1>
+
+    <div class="instructions">
+        <strong>Instructions:</strong>
+        Complete the text with the correct possessive adjective or possessive pronoun.
+        Choose an answer from each drop-down menu.
+    </div>
+
+    <div class="word-bank">
+        my · mine · your · yours · his · her · hers · our · ours · their · theirs
+    </div>
+
+    <div class="text">
+
+        My name is Daniel, and I want to tell you about
+
+        <select data-answer="my">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        family.
+
+        I live with my parents and my younger sister.
+
+        <select data-answer="his">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        name is Carlos, and
+
+        <select data-answer="her">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        name is Laura.
+
+        My father is a teacher, and
+
+        <select data-answer="his">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        school is near our house.
+
+        My mother works in a hospital, and
+
+        <select data-answer="her">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        job is sometimes very busy.
+
+        <br><br>
+
+        My sister Laura is 15 years old. She has a small room next to
+
+        <select data-answer="mine">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        .
+
+        <select data-answer="her">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        room is usually very clean, but my room is often messy!
+
+        Laura has a blue computer on her desk. The computer is
+
+        <select data-answer="hers">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        , but the desk is
+
+        <select data-answer="mine">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        .
+
+        She also has many books. Those books are
+
+        <select data-answer="hers">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        , not mine.
+
+        <br><br>
+
+        We have two dogs.
+
+        <select data-answer="their">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        names are Max and Toby.
+
+        They are very friendly, and
+
+        <select data-answer="their">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        favorite place is the garden.
+
+        We also have a big garden behind the house. The garden is
+
+        <select data-answer="ours">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        , because my parents bought the house many years ago.
+
+        <br><br>
+
+        My grandparents live in another city.
+
+        <select data-answer="their">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        house is very old, but it is beautiful.
+
+        My grandmother has a small car. The car is
+
+        <select data-answer="hers">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        , but my grandfather doesn't have a car.
+
+        He usually uses
+
+        <select data-answer="ours">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        when he needs to go somewhere.
+
+        <br><br>
+
+        My family is very important to me. I love spending time with
+
+        <select data-answer="my">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        family, and I think they love spending time with me too.
+
+        What about you? Tell me about
+
+        <select data-answer="your">
+            <option value="">---</option>
+            <option>my</option>
+            <option>mine</option>
+            <option>your</option>
+            <option>yours</option>
+            <option>his</option>
+            <option>her</option>
+            <option>hers</option>
+            <option>our</option>
+            <option>ours</option>
+            <option>their</option>
+            <option>theirs</option>
+        </select>
+
+        family!
+
+    </div>
+
+    <button onclick="checkAnswers()">Check Answers</button>
+    <button class="reset" onclick="resetActivity()">Try Again</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function checkAnswers() {
+
+    const selects = document.querySelectorAll("select");
+    let correct = 0;
+
+    selects.forEach(select => {
+
+        const correctAnswer = select.dataset.answer;
+        const studentAnswer = select.value;
+
+        select.classList.remove("correct", "incorrect");
+
+        if (studentAnswer === correctAnswer) {
+            select.classList.add("correct");
+            correct++;
+        } else {
+            select.classList.add("incorrect");
+        }
+    });
+
+    const total = selects.length;
+    const percentage = Math.round((correct / total) * 100);
+
+    document.getElementById("result").innerHTML =
+        `Score: ${correct} / ${total} (${percentage}%)`;
+
+}
+
+function resetActivity() {
+
+    const selects = document.querySelectorAll("select");
+
+    selects.forEach(select => {
+        select.value = "";
+        select.classList.remove("correct", "incorrect");
+    });
+
+    document.getElementById("result").innerHTML = "";
+
+}
+
+</script>
+
+</body>
+</html>

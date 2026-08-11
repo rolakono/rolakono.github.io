@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Present vs Present Progressive</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 30px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .instructions {
+            background: #eef5ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .text {
+            font-size: 18px;
+            line-height: 2.2;
+        }
+
+        .gap {
+            display: inline-block;
+            margin: 0 3px;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 4px 8px;
+            border: 2px solid #bbb;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+        }
+
+        select.correct {
+            border-color: #27ae60;
+            background-color: #eafaf1;
+        }
+
+        select.incorrect {
+            border-color: #e74c3c;
+            background-color: #fdecea;
+        }
+
+        .verb {
+            font-size: 15px;
+            color: #555;
+            font-style: italic;
+            margin-left: 2px;
+        }
+
+        button {
+            display: inline-block;
+            margin: 30px 5px 15px;
+            padding: 12px 25px;
+            font-size: 17px;
+            border: none;
+            border-radius: 8px;
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        .reset {
+            background: #7f8c8d;
+        }
+
+        .reset:hover {
+            background: #636e72;
+        }
+
+        .answers {
+            background: #fff8dc;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .legend {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Simple Present vs Present Progressive</h1>
+
+    <div class="instructions">
+        <strong>Instructions:</strong><br>
+        Complete the text with the correct form of the verb.
+        Choose between <strong>Simple Present</strong> and
+        <strong>Present Progressive</strong>.
+        Pay attention to words such as
+        <em>usually, every day, always, now, today, at the moment</em>,
+        and the context.
+    </div>
+
+    <div class="text">
+
+        My name is Emma, and I
+
+        <span class="gap">
+            <select data-answer="live">
+                <option value="">---</option>
+                <option>live</option>
+                <option>am living</option>
+            </select>
+            <span class="verb">(live)</span>
+        </span>
+
+        with my parents and my younger brother in a small town.
+
+        We
+
+        <span class="gap">
+            <select data-answer="have">
+                <option value="">---</option>
+                <option>have</option>
+                <option>are having</option>
+            </select>
+            <span class="verb">(have)</span>
+        </span>
+
+        a comfortable house near the city center.
+
+        My father
+
+        <span class="gap">
+            <select data-answer="works">
+                <option value="">---</option>
+                <option>work</option>
+                <option>works</option>
+                <option>is working</option>
+            </select>
+            <span class="verb">(work)</span>
+        </span>
+
+        in a bank, and my mother
+
+        <span class="gap">
+            <select data-answer="teaches">
+                <option value="">---</option>
+                <option>teach</option>
+                <option>teaches</option>
+                <option>is teaching</option>
+            </select>
+            <span class="verb">(teach)</span>
+        </span>
+
+        English at a local school.
+
+        My brother Daniel is 12 years old. He usually
+
+        <span class="gap">
+            <select data-answer="plays">
+                <option value="">---</option>
+                <option>play</option>
+                <option>plays</option>
+                <option>is playing</option>
+            </select>
+            <span class="verb">(play)</span>
+        </span>
+
+        soccer with his friends after school.
+
+        He also
+
+        <span class="gap">
+            <select data-answer="likes">
+                <option value="">---</option>
+                <option>like</option>
+                <option>likes</option>
+                <option>is liking</option>
+            </select>
+            <span class="verb">(like)</span>
+        </span>
+
+        video games, but he doesn't play them every day.
+
+        <br><br>
+
+        Today is Saturday, and things are different.
+
+        Right now, my father
+
+        <span class="gap">
+            <select data-answer="is cooking">
+                <option value="">---</option>
+                <option>cooks</option>
+                <option>cook</option>
+                <option>is cooking</option>
+            </select>
+            <span class="verb">(cook)</span>
+        </span>
+
+        lunch in the kitchen.
+
+        My mother
+
+        <span class="gap">
+            <select data-answer="is watching">
+                <option value="">---</option>
+                <option>watches</option>
+                <option>watch</option>
+                <option>is watching</option>
+            </select>
+            <span class="verb">(watch)</span>
+        </span>
+
+        TV in the living room, and Daniel
+
+        <span class="gap">
+            <select data-answer="is playing">
+                <option value="">---</option>
+                <option>plays</option>
+                <option>play</option>
+                <option>is playing</option>
+            </select>
+            <span class="verb">(play)</span>
+        </span>
+
+        a new video game.
+
+        I
+
+        <span class="gap">
+            <select data-answer="am studying">
+                <option value="">---</option>
+                <option>study</option>
+                <option>studies</option>
+                <option>am studying</option>
+            </select>
+            <span class="verb">(study)</span>
+        </span>
+
+        English in my bedroom because I have an exam next week.
+
+        <br><br>
+
+        During the week, I normally
+
+        <span class="gap">
+            <select data-answer="get up">
+                <option value="">---</option>
+                <option>get up</option>
+                <option>gets up</option>
+                <option>am getting up</option>
+            </select>
+            <span class="verb">(get up)</span>
+        </span>
+
+        at seven o'clock.
+
+        I
+
+        <span class="gap">
+            <select data-answer="eat">
+                <option value="">---</option>
+                <option>eat</option>
+                <option>eats</option>
+                <option>am eating</option>
+            </select>
+            <span class="verb">(eat)</span>
+        </span>
+
+        breakfast with my family, and then I
+
+        <span class="gap">
+            <select data-answer="go">
+                <option value="">---</option>
+                <option>go</option>
+                <option>goes</option>
+                <option>am going</option>
+            </select>
+            <span class="verb">(go)</span>
+        </span>
+
+        to school by bus.
+
+        My classes
+
+        <span class="gap">
+            <select data-answer="start">
+                <option value="">---</option>
+                <option>start</option>
+                <option>starts</option>
+                <option>are starting</option>
+            </select>
+            <span class="verb">(start)</span>
+        </span>
+
+        at eight thirty and usually
+
+        <span class="gap">
+            <select data-answer="finish">
+                <option value="">---</option>
+                <option>finish</option>
+                <option>finishes</option>
+                <option>are finishing</option>
+            </select>
+            <span class="verb">(finish)</span>
+        </span>
+
+        at two o'clock.
+
+        <br><br>
+
+        This week, however, I
+
+        <span class="gap">
+            <select data-answer="am preparing">
+                <option value="">---</option>
+                <option>prepare</option>
+                <option>prepares</option>
+                <option>am preparing</option>
+            </select>
+            <span class="verb">(prepare)</span>
+        </span>
+
+        for an important English exam.
+
+        I
+
+        <span class="gap">
+            <select data-answer="am reading">
+                <option value="">---</option>
+                <option>read</option>
+                <option>reads</option>
+                <option>am reading</option>
+            </select>
+            <span class="verb">(read)</span>
+        </span>
+
+        more books than usual, and I
+
+        <span class="gap">
+            <select data-answer="am practicing">
+                <option value="">---</option>
+                <option>practice</option>
+                <option>practices</option>
+                <option>am practicing</option>
+            </select>
+            <span class="verb">(practice)</span>
+        </span>
+
+        English every evening.
+
+        <br><br>
+
+        I really
+
+        <span class="gap">
+            <select data-answer="enjoy">
+                <option value="">---</option>
+                <option>enjoy</option>
+                <option>enjoys</option>
+                <option>am enjoying</option>
+            </select>
+            <span class="verb">(enjoy)</span>
+        </span>
+
+        studying languages, but I don't usually
+
+        <span class="gap">
+            <select data-answer="study">
+                <option value="">---</option>
+                <option>study</option>
+                <option>studies</option>
+                <option>am studying</option>
+            </select>
+            <span class="verb">(study)</span>
+        </span>
+
+        on Saturday.
+
+        Today, though, I
+
+        <span class="gap">
+            <select data-answer="am working">
+                <option value="">---</option>
+                <option>work</option>
+                <option>works</option>
+                <option>am working</option>
+            </select>
+            <span class="verb">(work)</span>
+        </span>
+
+        hard because I want to get a good grade.
+
+    </div>
+
+    <button onclick="checkAnswers()">Check Answers</button>
+    <button class="reset" onclick="resetActivity()">Try Again</button>
+    <button onclick="showAnswers()">Show Answers</button>
+
+    <div id="result"></div>
+
+    <div id="answers" class="answers">
+        <strong>Answer Key:</strong><br><br>
+        1. live<br>
+        2. have<br>
+        3. works<br>
+        4. teaches<br>
+        5. plays<br>
+        6. likes<br>
+        7. is cooking<br>
+        8. is watching<br>
+        9. is playing<br>
+        10. am studying<br>
+        11. get up<br>
+        12. eat<br>
+        13. go<br>
+        14. start<br>
+        15. finish<br>
+        16. am preparing<br>
+        17. am reading<br>
+        18. am practicing<br>
+        19. enjoy<br>
+        20. study<br>
+        21. am working
+    </div>
+
+</div>
+
+<script>
+
+function checkAnswers() {
+
+    const selects = document.querySelectorAll("select");
+    let correct = 0;
+
+    selects.forEach(select => {
+
+        const correctAnswer = select.dataset.answer;
+        const studentAnswer = select.value;
+
+        select.classList.remove("correct", "incorrect");
+
+        if (studentAnswer === correctAnswer) {
+            select.classList.add("correct");
+            correct++;
+        } else {
+            select.classList.add("incorrect");
+        }
+    });
+
+    const total = selects.length;
+    const percentage = Math.round((correct / total) * 100);
+
+    let message = "";
+
+    if (percentage === 100) {
+        message = "🎉 Excellent! Perfect score!";
+    } else if (percentage >= 80) {
+        message = "👏 Very good!";
+    } else if (percentage >= 60) {
+        message = "👍 Good job! Keep practicing.";
+    } else {
+        message = "📚 Keep practicing. You can do it!";
+    }
+
+    document.getElementById("result").innerHTML =
+        `Score: ${correct} / ${total} (${percentage}%)<br>${message}`;
+}
+
+
+function resetActivity() {
+
+    const selects = document.querySelectorAll("select");
+
+    selects.forEach(select => {
+        select.value = "";
+        select.classList.remove("correct", "incorrect");
+    });
+
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("answers").style.display = "none";
+}
+
+
+function showAnswers() {
+
+    const answerBox = document.getElementById("answers");
+
+    if (answerBox.style.display === "none" ||
+        answerBox.style.display === "") {
+
+        answerBox.style.display = "block";
+
+    } else {
+
+        answerBox.style.display = "none";
+
+    }
+}
+
+</script>
+
+</body>
+</html>
