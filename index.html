@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Recursos y ejercicios para practicar inglés.">
+  <title>English Learning Hub | Recursos de inglés</title>
+  <style>
+    :root {
+      --ink: #17233b;
+      --muted: #667085;
+      --paper: #f6f8fc;
+      --card: #ffffff;
+      --primary: #3659d9;
+      --primary-dark: #2745b7;
+      --mint: #dff6ee;
+      --line: #e5eaf3;
+      --shadow: 0 12px 35px rgba(30, 48, 85, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .hero {
+      color: white;
+      padding: 64px 22px 58px;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(255,255,255,.18), transparent 25%),
+        linear-gradient(125deg, #18294d, #3659d9 70%, #6481ed);
+    }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    .eyebrow {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(255,255,255,.14); font-size: .78rem;
+      letter-spacing: .09em; text-transform: uppercase; font-weight: 700;
+    }
+    h1 { max-width: 720px; margin: 18px 0 12px; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.08; letter-spacing: -.04em; }
+    .hero p { max-width: 650px; margin: 0; color: #e8edff; font-size: 1.08rem; }
+    .hero-note { margin-top: 25px; font-size: .9rem; color: #e8edff; }
+    main { padding: 38px 0 64px; }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 18px; }
+    h2 { margin: 0; font-size: 1.55rem; letter-spacing: -.025em; }
+    .sub { margin: 5px 0 0; color: var(--muted); }
+    .tools { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 28px; }
+    input, select {
+      min-height: 46px; border: 1px solid var(--line); border-radius: 12px;
+      background: white; color: var(--ink); padding: 0 14px; font: inherit;
+      outline: none;
+    }
+    input { flex: 1 1 240px; }
+    select { flex: 0 1 180px; }
+    input:focus, select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(54,89,217,.12); }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .resource {
+      display: flex; flex-direction: column; min-height: 225px; padding: 21px;
+      background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+      box-shadow: var(--shadow); transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .resource:hover { transform: translateY(-3px); box-shadow: 0 16px 38px rgba(30,48,85,.12); }
+    .topline { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .emoji { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; background: #eef2ff; font-size: 1.35rem; }
+    .tag { padding: 4px 9px; border-radius: 999px; background: var(--mint); color: #17664f; font-size: .72rem; font-weight: 750; }
+    .resource h3 { margin: 16px 0 5px; font-size: 1.08rem; }
+    .resource p { margin: 0 0 18px; color: var(--muted); font-size: .92rem; }
+    .resource a { margin-top: auto; color: var(--primary); text-decoration: none; font-weight: 750; }
+    .resource a:hover { color: var(--primary-dark); text-decoration: underline; }
+    .empty { display: none; padding: 28px; text-align: center; color: var(--muted); background: white; border: 1px dashed var(--line); border-radius: 16px; }
+    .tip {
+      margin-top: 36px; padding: 22px 24px; border-radius: 18px;
+      background: #eaf0ff; border: 1px solid #dce5ff;
+    }
+    .tip strong { display: block; margin-bottom: 4px; }
+    footer { padding: 24px 20px; text-align: center; color: var(--muted); font-size: .86rem; border-top: 1px solid var(--line); }
+    @media (max-width: 800px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 560px) {
+      .hero { padding: 48px 0; }
+      .grid { grid-template-columns: 1fr; }
+      .section-heading { display: block; }
+      select { flex: 1 1 140px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Your English practice space</span>
+      <h1>Welcome to the English Learning Hub!</h1>
+      <p>Un espacio para seguir aprendiendo, practicar a tu ritmo y llevar tu inglés un paso más allá. Explora los recursos, elige una actividad y ¡let's get started!</p>
+      <div class="hero-note">Grammar · Vocabulary · Listening · Reading · Speaking</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="resources-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="resources-title">Explore the resources</h2>
+          <p class="sub">Encuentra ejercicios y materiales para practicar.</p>
+        </div>
+      </div>
+
+      <div class="tools">
+        <input id="search" type="search" placeholder="Buscar un recurso..." aria-label="Buscar recursos">
+        <select id="level" aria-label="Filtrar por nivel">
+          <option value="all">Todos los niveles</option>
+          <option value="A2">A2</option>
+          <option value="B1">B1</option>
+          <option value="B2">B2</option>
+          <option value="all-levels">Todos los niveles (general)</option>
+        </select>
+        <select id="skill" aria-label="Filtrar por habilidad">
+          <option value="all">Todas las habilidades</option>
+          <option value="Grammar">Grammar</option>
+          <option value="Vocabulary">Vocabulary</option>
+          <option value="Listening">Listening</option>
+          <option value="Reading">Reading</option>
+          <option value="Speaking">Speaking</option>
+          <option value="Writing">Writing</option>
+        </select>
+      </div>
+
+      <div class="grid" id="resource-grid">
+        <!-- Para agregar un recurso, duplica una tarjeta y cambia sus datos y el enlace. -->
+        <article class="resource" data-level="all-levels" data-skill="Grammar">
+          <div class="topline"><span class="emoji">🧩</span><span class="tag">All levels</span></div>
+          <h3>British Council: Grammar</h3>
+          <p>Explicaciones y actividades de gramática organizadas por nivel.</p>
+          <a href="https://learnenglish.britishcouncil.org/grammar" target="_blank" rel="noopener noreferrer">Explore grammar ↗</a>
+        </article>
+
+        <article class="resource" data-level="all-levels" data-skill="Vocabulary">
+          <div class="topline"><span class="emoji">🗂️</span><span class="tag">All levels</span></div>
+          <h3>British Council: Vocabulary</h3>
+          <p>Practica vocabulario cotidiano con actividades interactivas.</p>
+          <a href="https://learnenglish.britishcouncil.org/vocabulary" target="_blank" rel="noopener noreferrer">Build your vocabulary ↗</a>
+        </article>
+
+        <article class="resource" data-level="all-levels" data-skill="Listening">
+          <div class="topline"><span class="emoji">🎧</span><span class="tag">All levels</span></div>
+          <h3>ELLLO: Listening</h3>
+          <p>Audios, conversaciones y actividades para entrenar el oído.</p>
+          <a href="https://elllo.org/" target="_blank" rel="noopener noreferrer">Listen and practise ↗</a>
+        </article>
+
+        <article class="resource" data-level="all-levels" data-skill="Listening">
+          <div class="topline"><span class="emoji">🎙️</span><span class="tag">All levels</span></div>
+          <h3>ESL Lab</h3>
+          <p>Listening quizzes con conversaciones de diferentes situaciones.</p>
+          <a href="https://www.esl-lab.com/" target="_blank" rel="noopener noreferrer">Try a listening quiz ↗</a>
+        </article>
+
+        <article class="resource" data-level="all-levels" data-skill="Reading">
+          <div class="topline"><span class="emoji">📖</span><span class="tag">All levels</span></div>
+          <h3>ReadTheory</h3>
+          <p>Práctica de comprensión lectora con ejercicios adaptativos.</p>
+          <a href="https://readtheory.org/" target="_blank" rel="noopener noreferrer">Start reading ↗</a>
+        </article>
+
+        <article class="resource" data-level="all-levels" data-skill="Grammar">
+          <div class="topline"><span class="emoji">✍️</span><span class="tag">All levels</span></div>
+          <h3>Perfect English Grammar</h3>
+          <p>Hojas de práctica y explicaciones claras de estructuras gramaticales.</p>
+          <a href="https://www.perfect-english-grammar.com/grammar-exercises.html" target="_blank" rel="noopener noreferrer">Do some exercises ↗</a>
+        </article>
+
+        <article class="resource" data-level="B1" data-skill="Speaking">
+          <div class="topline"><span class="emoji">💬</span><span class="tag">B1</span></div>
+          <h3>Speaking practice: B1</h3>
+          <p>Ideas y recursos para desarrollar respuestas más completas y fluidas.</p>
+          <a href="https://learnenglish.britishcouncil.org/skills/speaking/b1-speaking" target="_blank" rel="noopener noreferrer">Practise speaking ↗</a>
+        </article>
+
+        <article class="resource" data-level="B2" data-skill="Speaking">
+          <div class="topline"><span class="emoji">🗣️</span><span class="tag">B2</span></div>
+          <h3>Speaking practice: B2</h3>
+          <p>Actividades para expresar opiniones, justificar ideas y debatir.</p>
+          <a href="https://learnenglish.britishcouncil.org/skills/speaking/b2-speaking" target="_blank" rel="noopener noreferrer">Take the challenge ↗</a>
+        </article>
+
+        <article class="resource" data-level="B1" data-skill="Writing">
+          <div class="topline"><span class="emoji">📝</span><span class="tag">B1</span></div>
+          <h3>Writing practice: B1</h3>
+          <p>Modelos y actividades para mejorar la escritura en inglés.</p>
+          <a href="https://learnenglish.britishcouncil.org/skills/writing/b1-writing" target="_blank" rel="noopener noreferrer">Improve your writing ↗</a>
+        </article>
+
+        <article class="resource" data-level="B2" data-skill="Writing">
+          <div class="topline"><span class="emoji">📚</span><span class="tag">B2</span></div>
+          <h3>Writing practice: B2</h3>
+          <p>Practica textos más elaborados, organización y registro.</p>
+          <a href="https://learnenglish.britishcouncil.org/skills/writing/b2-writing" target="_blank" rel="noopener noreferrer">Write with confidence ↗</a>
+        </article>
+
+        <article class="resource" data-level="A2" data-skill="Grammar">
+          <div class="topline"><span class="emoji">🔤</span><span class="tag">A2</span></div>
+          <h3>Cambridge: A2 Key preparation</h3>
+          <p>Actividades y materiales para practicar habilidades de nivel A2.</p>
+          <a href="https://www.cambridgeenglish.org/exams-and-tests/key/preparation/" target="_blank" rel="noopener noreferrer">Explore A2 practice ↗</a>
+        </article>
+
+        <article class="resource" data-level="B2" data-skill="Vocabulary">
+          <div class="topline"><span class="emoji">🚀</span><span class="tag">B2</span></div>
+          <h3>Cambridge: B2 First preparation</h3>
+          <p>Recursos para ampliar vocabulario y prepararse para tareas B2.</p>
+          <a href="https://www.cambridgeenglish.org/exams-and-tests/first/preparation/" target="_blank" rel="noopener noreferrer">Explore B2 practice ↗</a>
+        </article>
+      </div>
+      <div class="empty" id="empty">No encontramos recursos con esos filtros. Prueba con otra búsqueda.</div>
+    </section>
+
+    <aside class="tip">
+      <strong>💡 A little tip</strong>
+      Practica un poco cada día. La constancia importa más que estudiar durante muchas horas de vez en cuando.
+    </aside>
+  </main>
+
+  <footer>
+    English Learning Hub · Keep learning, keep growing.
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const levelFilter = document.getElementById('level');
+    const skillFilter = document.getElementById('skill');
+    const cards = [...document.querySelectorAll('.resource')];
+    const emptyMessage = document.getElementById('empty');
+
+    function filterResources() {
+      const query = searchInput.value.trim().toLowerCase();
+      const level = levelFilter.value;
+      const skill = skillFilter.value;
+      let visible = 0;
+
+      cards.forEach(card => {
+        const matchesText = card.textContent.toLowerCase().includes(query);
+        const cardLevel = card.dataset.level;
+        const matchesLevel = level === 'all' ||
+          cardLevel === level ||
+          (level === 'all-levels' && cardLevel === 'all-levels');
+        const matchesSkill = skill === 'all' || card.dataset.skill === skill;
+        const show = matchesText && matchesLevel && matchesSkill;
+        card.hidden = !show;
+        if (show) visible++;
+      });
+
+      emptyMessage.style.display = visible ? 'none' : 'block';
+    }
+
+    searchInput.addEventListener('input', filterResources);
+    levelFilter.addEventListener('change', filterResources);
+    skillFilter.addEventListener('change', filterResources);
+  </script>
+</body>
+</html>
