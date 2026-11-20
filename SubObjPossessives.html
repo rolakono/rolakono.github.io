@@ -1,0 +1,899 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pronoun Challenge - A2 English</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef5ff, #f8f9fa);
+    color: #333;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    max-width: 950px;
+    margin: 30px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    color: #263a5b;
+}
+
+header p {
+    color: #666;
+}
+
+/* INSTRUCTIONS */
+
+.instructions {
+    background: #eef5ff;
+    border-left: 5px solid #3498db;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* GRAMMAR CARDS */
+
+.grammar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.grammar-card {
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.subject {
+    background: #e8f4fd;
+}
+
+.object {
+    background: #f5e8ff;
+}
+
+.pos-adj {
+    background: #e8f8ef;
+}
+
+.pos-pro {
+    background: #fff4df;
+}
+
+.grammar-card small {
+    display: block;
+    margin-top: 6px;
+    font-weight: normal;
+}
+
+/* TEXT */
+
+.exercise {
+    font-size: 18px;
+    line-height: 2.4;
+}
+
+.exercise-title {
+    color: #2c3e50;
+    margin-top: 35px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+/* SELECT */
+
+select {
+    font-size: 16px;
+    padding: 5px 9px;
+    border: 2px solid #bbb;
+    border-radius: 7px;
+    background: white;
+    cursor: pointer;
+    margin: 0 3px;
+}
+
+select:hover {
+    border-color: #3498db;
+}
+
+select.correct {
+    border-color: #27ae60;
+    background: #eafaf1;
+}
+
+select.incorrect {
+    border-color: #e74c3c;
+    background: #fdecea;
+}
+
+/* BUTTONS */
+
+.buttons {
+    text-align: center;
+    margin-top: 35px;
+}
+
+button {
+    border: none;
+    padding: 13px 24px;
+    margin: 5px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background: #3498db;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.reset {
+    background: #7f8c8d;
+}
+
+.explanations-button {
+    background: #8e44ad;
+}
+
+/* RESULT */
+
+#result {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* FEEDBACK */
+
+.feedback {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 10px;
+    display: none;
+    line-height: 1.7;
+}
+
+.feedback.good {
+    background: #eafaf1;
+    border-left: 5px solid #27ae60;
+}
+
+.feedback.medium {
+    background: #fff8e1;
+    border-left: 5px solid #f39c12;
+}
+
+.feedback.low {
+    background: #fdecea;
+    border-left: 5px solid #e74c3c;
+}
+
+/* EXPLANATIONS */
+
+.explanations {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    line-height: 1.7;
+}
+
+.explanations h3 {
+    color: #2c3e50;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 10px auto;
+        padding: 20px;
+    }
+
+    .grammar-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .exercise {
+        font-size: 17px;
+        line-height: 2.6;
+    }
+
+    select {
+        font-size: 15px;
+        max-width: 130px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>🎯 Pronoun Challenge</h1>
+
+<p>
+A2 English Grammar Practice
+</p>
+
+</header>
+
+
+<div class="instructions">
+
+<strong>Instructions:</strong>
+
+<br>
+
+Choose the correct pronoun from each drop-down menu.
+
+Pay attention to the position of the gap and the meaning of the sentence.
+
+You will practice four types of pronouns:
+
+<strong>Subject Pronouns, Object Pronouns, Possessive Adjectives,</strong>
+and <strong>Possessive Pronouns.</strong>
+
+</div>
+
+
+<!-- GRAMMAR TYPES -->
+
+<div class="grammar-grid">
+
+<div class="grammar-card subject">
+Subject Pronouns
+<small>I, you, he, she, it, we, they</small>
+</div>
+
+<div class="grammar-card object">
+Object Pronouns
+<small>me, you, him, her, it, us, them</small>
+</div>
+
+<div class="grammar-card pos-adj">
+Possessive Adjectives
+<small>my, your, his, her, its, our, their</small>
+</div>
+
+<div class="grammar-card pos-pro">
+Possessive Pronouns
+<small>mine, yours, his, hers, ours, theirs</small>
+</div>
+
+</div>
+
+
+<div class="exercise">
+
+
+<h2 class="exercise-title">Part 1: Family and Friends</h2>
+
+
+My name is Sarah. 
+
+<select data-answer="I">
+<option value="">---</option>
+<option>I</option>
+<option>me</option>
+<option>my</option>
+<option>mine</option>
+</select>
+
+am 20 years old and I live with my parents.
+
+
+My brother is 17. 
+
+<select data-answer="He">
+<option value="">---</option>
+<option>He</option>
+<option>Him</option>
+<option>His</option>
+<option>Hers</option>
+</select>
+
+is very friendly and funny.
+
+
+I often play video games with 
+
+<select data-answer="him">
+<option value="">---</option>
+<option>he</option>
+<option>him</option>
+<option>his</option>
+<option>mine</option>
+</select>
+
+after school.
+
+
+My sister is younger than me.
+
+<select data-answer="Her">
+<option value="">---</option>
+<option>She</option>
+<option>Her</option>
+<option>Hers</option>
+<option>Him</option>
+</select>
+
+name is Emily.
+
+
+Emily has a small dog.
+
+<select data-answer="Her">
+<option value="">---</option>
+<option>She</option>
+<option>Her</option>
+<option>Hers</option>
+<option>Him</option>
+</select>
+
+dog is very playful.
+
+
+The dog often follows 
+
+<select data-answer="her">
+<option value="">---</option>
+<option>she</option>
+<option>her</option>
+<option>hers</option>
+<option>his</option>
+</select>
+
+around the house.
+
+
+My parents have a car.
+
+The car is 
+
+<select data-answer="theirs">
+<option value="">---</option>
+<option>their</option>
+<option>theirs</option>
+<option>them</option>
+<option>they</option>
+</select>
+
+.
+
+
+I don't have a car, so my parents sometimes take 
+
+<select data-answer="me">
+<option value="">---</option>
+<option>I</option>
+<option>me</option>
+<option>my</option>
+<option>mine</option>
+</select>
+
+to school.
+
+
+
+<h2 class="exercise-title">Part 2: At School</h2>
+
+
+My best friend is Daniel.
+
+<select data-answer="He">
+<option value="">---</option>
+<option>He</option>
+<option>Him</option>
+<option>His</option>
+<option>Hers</option>
+</select>
+
+is in my English class.
+
+
+I sit next to 
+
+<select data-answer="him">
+<option value="">---</option>
+<option>he</option>
+<option>him</option>
+<option>his</option>
+<option>mine</option>
+</select>
+
+every day.
+
+
+We usually do 
+
+<select data-answer="our">
+<option value="">---</option>
+<option>we</option>
+<option>us</option>
+<option>our</option>
+<option>ours</option>
+</select>
+
+homework together.
+
+
+Daniel often forgets 
+
+<select data-answer="his">
+<option value="">---</option>
+<option>he</option>
+<option>him</option>
+<option>his</option>
+<option>hers</option>
+</select>
+
+notebook.
+
+
+When this happens, I share 
+
+<select data-answer="mine">
+<option value="">---</option>
+<option>my</option>
+<option>me</option>
+<option>mine</option>
+<option>ours</option>
+</select>
+
+with him.
+
+
+Our teacher is very nice.
+
+<select data-answer="She">
+<option value="">---</option>
+<option>Her</option>
+<option>Hers</option>
+<option>She</option>
+<option>Him</option>
+</select>
+
+always helps us.
+
+
+Sometimes we ask 
+
+<select data-answer="her">
+<option value="">---</option>
+<option>she</option>
+<option>her</option>
+<option>hers</option>
+<option>they</option>
+</select>
+
+questions about grammar.
+
+
+She also checks 
+
+<select data-answer="our">
+<option value="">---</option>
+<option>we</option>
+<option>us</option>
+<option>our</option>
+<option>ours</option>
+</select>
+
+work.
+
+
+
+<h2 class="exercise-title">Part 3: A Day at Home</h2>
+
+
+At the weekend, my family spends a lot of time together.
+
+My mother loves cooking.
+
+<select data-answer="She">
+<option value="">---</option>
+<option>Her</option>
+<option>Hers</option>
+<option>She</option>
+<option>Him</option>
+</select>
+
+usually prepares lunch for everyone.
+
+
+My father helps 
+
+<select data-answer="her">
+<option value="">---</option>
+<option>she</option>
+<option>her</option>
+<option>hers</option>
+<option>his</option>
+</select>
+
+in the kitchen.
+
+
+My brother and I clean the house.
+
+<select data-answer="We">
+<option value="">---</option>
+<option>Us</option>
+<option>Our</option>
+<option>Ours</option>
+<option>We</option>
+</select>
+
+usually clean the living room.
+
+
+The living room is 
+
+<select data-answer="ours">
+<option value="">---</option>
+<option>our</option>
+<option>ours</option>
+<option>us</option>
+<option>we</option>
+</select>
+
+.
+
+
+My parents have a bedroom upstairs.
+
+The bedroom is 
+
+<select data-answer="theirs">
+<option value="">---</option>
+<option>their</option>
+<option>theirs</option>
+<option>them</option>
+<option>they</option>
+</select>
+
+.
+
+
+My brother has his own bedroom too.
+
+It is 
+
+<select data-answer="his">
+<option value="">---</option>
+<option>he</option>
+<option>him</option>
+<option>his</option>
+<option>hers</option>
+</select>
+
+favorite place in the house.
+
+
+I have a small desk in my bedroom.
+
+The desk is 
+
+<select data-answer="mine">
+<option value="">---</option>
+<option>my</option>
+<option>mine</option>
+<option>me</option>
+<option>our</option>
+</select>
+
+.
+
+
+At night, my family watches TV together.
+
+My parents choose the program, but sometimes I choose 
+
+<select data-answer="it">
+<option value="">---</option>
+<option>he</option>
+<option>him</option>
+<option>it</option>
+<option>its</option>
+</select>
+
+too.
+
+
+
+</div>
+
+
+<!-- BUTTONS -->
+
+<div class="buttons">
+
+<button onclick="checkAnswers()">
+Check Answers
+</button>
+
+<button class="reset" onclick="resetActivity()">
+Try Again
+</button>
+
+<button class="explanations-button" onclick="toggleExplanations()">
+Grammar Help
+</button>
+
+</div>
+
+
+<div id="result"></div>
+
+<div id="feedback" class="feedback"></div>
+
+
+<!-- EXPLANATIONS -->
+
+<div id="explanations" class="explanations">
+
+<h3>📚 Grammar Help</h3>
+
+
+<h4>1. Subject Pronouns</h4>
+
+<p>
+Use subject pronouns as the subject of a sentence.
+</p>
+
+<p>
+<strong>I, you, he, she, it, we, they</strong>
+</p>
+
+<p>
+Example:
+<strong>She</strong> works at a school.
+</p>
+
+
+<h4>2. Object Pronouns</h4>
+
+<p>
+Use object pronouns after verbs or prepositions.
+</p>
+
+<p>
+<strong>me, you, him, her, it, us, them</strong>
+</p>
+
+<p>
+Example:
+I like <strong>him</strong>.
+</p>
+
+
+<h4>3. Possessive Adjectives</h4>
+
+<p>
+Possessive adjectives come before a noun.
+</p>
+
+<p>
+<strong>my, your, his, her, its, our, their</strong>
+</p>
+
+<p>
+Example:
+This is <strong>my book</strong>.
+</p>
+
+
+<h4>4. Possessive Pronouns</h4>
+
+<p>
+Possessive pronouns replace the noun. They are not followed by a noun.
+</p>
+
+<p>
+<strong>mine, yours, his, hers, ours, theirs</strong>
+</p>
+
+<p>
+Example:
+This book is <strong>mine</strong>.
+</p>
+
+
+</div>
+
+</div>
+
+
+<script>
+
+
+function checkAnswers() {
+
+    const selects = document.querySelectorAll("select");
+
+    let correct = 0;
+
+    selects.forEach(select => {
+
+        const answer = select.dataset.answer;
+
+        const userAnswer = select.value;
+
+        select.classList.remove("correct", "incorrect");
+
+        if (userAnswer === answer) {
+
+            select.classList.add("correct");
+
+            correct++;
+
+        } else {
+
+            select.classList.add("incorrect");
+
+        }
+
+    });
+
+
+    const total = selects.length;
+
+    const percentage =
+        Math.round((correct / total) * 100);
+
+
+    let message = "";
+
+    const feedback =
+        document.getElementById("feedback");
+
+
+    if (percentage === 100) {
+
+        message = "🎉 Perfect! Excellent work!";
+
+        feedback.className = "feedback good";
+
+        feedback.innerHTML =
+            "Excellent! You have a very good understanding of these pronouns.";
+
+    }
+
+    else if (percentage >= 80) {
+
+        message = "👏 Very good!";
+
+        feedback.className = "feedback good";
+
+        feedback.innerHTML =
+            "Great job! Review the few mistakes marked in red.";
+
+    }
+
+    else if (percentage >= 60) {
+
+        message = "👍 Good job!";
+
+        feedback.className = "feedback medium";
+
+        feedback.innerHTML =
+            "You're making progress. Review the Grammar Help section and try again.";
+
+    }
+
+    else {
+
+        message = "📚 Keep practicing!";
+
+        feedback.className = "feedback low";
+
+        feedback.innerHTML =
+            "Don't worry. Review the four types of pronouns and try the activity again.";
+
+    }
+
+
+    feedback.style.display = "block";
+
+
+    document.getElementById("result").innerHTML =
+        `Score: ${correct} / ${total} (${percentage}%)<br>${message}`;
+
+}
+
+
+function resetActivity() {
+
+    const selects =
+        document.querySelectorAll("select");
+
+
+    selects.forEach(select => {
+
+        select.value = "";
+
+        select.classList.remove(
+            "correct",
+            "incorrect"
+        );
+
+    });
+
+
+    document.getElementById("result").innerHTML = "";
+
+    document.getElementById("feedback").style.display =
+        "none";
+
+}
+
+
+function toggleExplanations() {
+
+    const box =
+        document.getElementById("explanations");
+
+
+    if (box.style.display === "block") {
+
+        box.style.display = "none";
+
+    } else {
+
+        box.style.display = "block";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+```
